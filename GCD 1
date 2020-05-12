@@ -1,0 +1,35 @@
+//Please Enter 0 to exit.
+#include<stdio.h>
+int gcd(long long a,long long b)
+{
+	long long g,t;
+	if(a==0) g=b;
+	else if(b==0) g=a;
+	else {
+		while(a!=0){
+			t=a;
+			a=b%a;
+			b=t;
+		}
+		g=b;
+	}
+	return g;
+}
+int main()
+{
+	while(1<2){
+	int t,i;
+	scanf("%d",&t);
+	if(t==0) return 0;
+	long long ara[t];
+	for(i=0;i<t;i++){
+		scanf("%lld",&ara[i]);
+	}
+	long long g;
+	for(i=0;i<t;i++){
+		g=gcd(ara[i],ara[i+1]);
+		ara[i+1]=g;
+	}
+	printf("GCD = %lld\n\n",ara[t-1]);
+	}
+}
