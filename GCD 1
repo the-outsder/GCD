@@ -17,7 +17,7 @@ int gcd(long long a,long long b)
 }
 int main()
 {
-	while(1<2){
+	while(1){
 	int t,i;
 	scanf("%d",&t);
 	if(t==0) return 0;
